@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h1 id="titre-principal">Cours JavaScript</h1>
+    <div id="texte-dynamique" style="display: none;">Vas-y donne tout tes informations...</div>
+    <div class="video-background-wrapper">
+      <video id="backgroundVideo" class="video-background" autoplay muted loop>
+          <source src="0000-0080.mp4" type="video/mp4">
+      </video>
+  </div>
+    <form id="myForm">
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            <table>
+                <tr>
+                    <td><label for="nom">Nom</label></td>
+                    <td><input id="nom" type="text" placeholder="Saisir votre nom"></td>
+                </tr>
+                <tr>
+                    <td><label for="prenom">Prénom</label></td>
+                    <td><input id="prenom" type="text" placeholder="Saisir votre prénom"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input id="email" type="email" placeholder="Saisir votre Email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Mot de passe</label></td>
+                    <td><input id="password" type="password" placeholder="Saisir votre mot de passe"></td>
+                </tr>
+                <tr>
+                    <td><label for="confirm-password">Confirmer le mot de passe</label></td>
+                    <td><input id="confirm-password" type="password" placeholder="Confirmer votre mot de passe"></td>
+                </tr>
+
+            <td><label for="pays">Pays</label></td>
+            <td>
+                <select id="pays">
+                    <option>France</option>
+                    <option>Russie</option>
+                    <option>Chine</option>
+                    <option>Japon</option>
+                    <option>Espagne</option>
+                    <option>Italie</option>
+                </select>
+            </td>
+
+            <fieldset>
+            <legend>Question</legend>
+            <div class="checkbox-container">
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox" name="qcm" value="informatique">
+                    <span class="checkmark"></span>
+                    <span class="label">Informatique</span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="qcm" value="art">
+                    <span class="checkmark"></span>
+                    <span class="label">Art</span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="qcm" value="sport">
+                    <span class="checkmark"></span>
+                    <span class="label">Sport</span>
+                  </label>
+                </div>
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox" name="qcm" value="autres">
+                    <span class="checkmark"></span>
+                    <span class="label">Autres</span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="qcm" value="rien">
+                    <span class="checkmark"></span>
+                    <span class="label">Rien</span>
+                  </label>
+                </div>
+              </div>
+              <small class="error-msg"></small>
+              
+
+            <legend>Nouvelle Checkbox</legend>
+            <label class="checkbox-btn" id="unique-checkbox-btn">
+              <input id="unique-checkbox" type="checkbox">
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Nouvelle option</span>
+            </label>
+        </fieldset>
+        <div class="mydict">
+            <div class="mydict-container">
+              <label>
+                <input type="radio" name="radio" checked="">
+                <span>Femme</span>
+              </label>
+              <label>
+                <input type="radio" name="radio">
+                <span>Homme</span>
+              </label>
+              <label>
+                <input type="radio" name="radio">
+                <span>Autres</span>
+              </label>
+            </div>
+          </div>
+          
+                <tr>
+                    <td colspan="2">
+                    <input type="submit" value="Envoyer" class="styled-button">
+                    <input type="reset" value="Annuler" class="styled-button">
+                    </td>
+                </tr>
+            </table>
+            <ul id="errorList" class="error-list"></ul>
+        </fieldset>
+
+    </form>
+    <script src="app.js"></script>
+
+</body>
+</html>
