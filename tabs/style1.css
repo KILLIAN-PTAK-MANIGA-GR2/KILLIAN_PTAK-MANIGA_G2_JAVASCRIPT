@@ -45,18 +45,3 @@ h1 {
     max-width: 400px;
     background-color: #f9f9f9;
 }
-
-/* Contenu actif */
-.content.active {
-    display: block;
-}
-
-.texteM1{
-    display: flex;
-}
-.texteM2{
-    display: flex;
-}
-.texteM3{
-    display: flex;
-}

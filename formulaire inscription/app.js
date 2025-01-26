@@ -122,10 +122,6 @@ if (form && titre && texteDynamique) {
 }
 
 
-
-
-
-
     // Vérification des QCM
     if (checkboxes.length === 0) {
         const errorMsg = document.querySelector('fieldset small.error-msg');
@@ -140,6 +136,3 @@ if (form && titre && texteDynamique) {
     if (isValid) {
         alert("Formulaire soumis avec succès !");
     };
-
-    console.log(passwordRegex.test("MotDePasse1!")); // Devrait retourner `true`
-

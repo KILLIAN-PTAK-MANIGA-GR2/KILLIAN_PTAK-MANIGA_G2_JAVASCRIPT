@@ -78,12 +78,6 @@ ul.error-list {
   list-style-type: square;
 }
 
-.tab-active {
-  background-color: #0078d7;
-  color: white;
-  border-radius: 5px;
-}
-
 .content {
   display: none;
 }

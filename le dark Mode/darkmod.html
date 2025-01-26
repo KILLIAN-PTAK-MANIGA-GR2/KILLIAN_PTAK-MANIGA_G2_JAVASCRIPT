@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Déclaration du type de document HTML5 et la langue de la page (français) -->
+
 <head>
+    <!-- Contient les métadonnées et les liens vers les ressources -->
     <meta charset="UTF-8">
+    <!-- Définit le jeu de caractères en UTF-8 pour inclure tous les caractères spéciaux -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permet d'assurer une bonne mise en page responsive, avec une largeur d'écran égale à celle du périphérique -->
+    
     <title>Exercice Dark Mode</title>
+    <!-- Définit le titre de la page qui apparaîtra dans l'onglet du navigateur -->
+    
     <link rel="stylesheet" href="style.css">
+    <!-- Lien vers la feuille de style externe "style.css" pour appliquer les styles à la page HTML -->
 </head>
+
 <body>
+    <!-- Début du corps de la page -->
+
     <div class="center-container">
+        <!-- Conteneur principal centré pour placer les éléments au milieu de la page -->
+
         <header>
+            <!-- Section d'en-tête de la page -->
             <div class="toggle">
+                <!-- Conteneur du bouton de bascule pour activer le mode sombre -->
+                
                 <input type="checkbox" id="darkModeToggle">
+                <!-- Case à cocher pour activer/désactiver le mode sombre. Elle sera utilisée dans le script JavaScript -->
+
                 <span class="button"></span>
+                <!-- Élément de bouton visuel associé au checkbox. Il servira d'interface utilisateur -->
+
                 <label for="darkModeToggle" class="label">☼</label>
+                <!-- Le label qui affiche l'icône du soleil "☼". Il est lié à la case à cocher grâce à l'attribut "for" -->
             </div>
         </header>
-    </div>
 
+    </div>
+    
     <h1>Cours JavaScript</h1>
+    <!-- Titre principal de la page -->
+    
     <p>page web qui passe du mode clair au mode sombre.</p>
+    <!-- Description de la fonctionnalité de la page -->
 
     <script src="java.js"></script>
+    <!-- Lien vers le fichier JavaScript "java.js" pour gérer le comportement du Dark Mode -->
+
 </body>
+
 </html>

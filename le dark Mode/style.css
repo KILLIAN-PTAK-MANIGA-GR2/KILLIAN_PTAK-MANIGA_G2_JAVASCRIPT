@@ -1,172 +1,175 @@
 /* Style par défaut (mode clair) */
 body {
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s; /* Pour une transition douce */
+  background-color: white; /* Fond blanc en mode clair */
+  color: black; /* Texte noir en mode clair */
+  font-family: Arial, sans-serif; /* Police d'écriture */
+  transition: background-color 0.3s, color 0.3s; /* Transition douce pour les changements de couleurs */
 }
 
 header {
-    background-color: lightgray;
-    padding: 40px;
-    text-align: right;
+  background-color: lightgray; /* Fond gris clair pour l'en-tête */
+  padding: 40px; /* Espacement autour du contenu de l'en-tête */
+  text-align: right; /* Aligne le texte à droite */
 }
-
 
 /* Mode sombre */
 body.dark-mode {
-    background-color: #121212;
-    color: white;
+  background-color: #121212; /* Fond noir en mode sombre */
+  color: white; /* Texte blanc en mode sombre */
 }
 
 header.dark-mode {
-    background-color: #333;
+  background-color: #333; /* Fond plus sombre pour l'en-tête en mode sombre */
 }
-/* From Uiverse.io by catraco */ 
+
+/* Bouton personnalisé */
 .btn-class-name {
-    --primary: 255, 90, 120;
-    --secondary: 150, 50, 60;
-    width: 60px;
-    height: 50px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    user-select: none;
-    touch-action: manipulation;
-    outline: 10px solid rgb(var(--primary), .5);
-    border-radius: 100%;
-    position: relative;
-    transition: .3s;
-  }
-  
-  .btn-class-name .back {
-    background: rgb(var(--secondary));
-    border-radius: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .btn-class-name .front {
-    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
-    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
-    border-radius: 100%;
-    position: absolute;
-    border: 1px solid rgb(var(--secondary));
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: inherit;
-    transform: translateY(-15%);
-    transition: .15s;
-    color: rgb(var(--secondary));
-  }
-  
-  .btn-class-name:active .front {
-    transform: translateY(0%);
-    box-shadow: 0 0;
-  }
-
-  .toggle {
-    position: absolute; /* Positionnement absolu pour permettre le centrage */
-    top: 50%; /* Milieu vertical de l'écran */
-    left: 50%; /* Milieu horizontal de l'écran */
-    transform: translate(-50%, -50%); /* Centrage parfait */
-    height: 100px; /* Taille du conteneur */
-    width: 100px; /* Taille du conteneur */
+  --primary: 255, 90, 120; /* Définition d'une couleur primaire (rouge) */
+  --secondary: 150, 50, 60; /* Définition d'une couleur secondaire (bleu) */
+  width: 60px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  border: none; /* Pas de bordure */
+  outline: none; /* Pas de contour */
+  cursor: pointer; /* Change le curseur en main lorsque survolé */
+  user-select: none; /* Désactive la sélection du texte dans le bouton */
+  touch-action: manipulation; /* Prévient les comportements tactiles inutiles */
+  outline: 10px solid rgb(var(--primary), .5); /* Ajoute un contour léger autour du bouton */
+  border-radius: 100%; /* Rend le bouton circulaire */
+  position: relative; /* Positionnement relatif pour permettre le placement des éléments à l'intérieur */
+  transition: .3s; /* Transition douce pour les changements de style */
 }
 
+.btn-class-name .back {
+  background: rgb(var(--secondary)); /* Couleur d'arrière-plan du bouton secondaire */
+  border-radius: 100%; /* Contours arrondis pour l'arrière-plan */
+  position: absolute; /* Positionnement absolu dans le bouton */
+  left: 0; /* Aligne à gauche */
+  top: 0; /* Aligne en haut */
+  width: 100%; /* Remplir toute la largeur du bouton */
+  height: 100%; /* Remplir toute la hauteur du bouton */
+}
 
-  .toggle:before {
-    box-shadow: 0;
-    border-radius: 84.5px;
-    background: #fff;
-    position: absolute;
-    margin-left: -36px;
-    margin-top: -36px;
-    opacity: 0.2;
-    height: 72px;
-    width: 72px;
-    left: 50%;
-    top: 50%;
-  }
-  
-  .toogle input:checked~.label {
-    color: rgba(255,0,0,0.8);
-  }
-  
-  .toggle .button {
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 68.8px;
-    position: absolute;
-    background: #eaeaea;
-    margin-left: -34.4px;
-    margin-top: -34.4px;
-    display: block;
-    height: 68.8px;
-    width: 68.8px;
-    left: 50%;
-    top: 50%;
-  }
-  
-  .toggle .label {
-    transition: color 300ms ease-out;
-    line-height: 101px;
-    text-align: center;
-    position: absolute;
-    font-weight: 700;
-    font-size: 28px;
-    display: block;
-    opacity: 0.9;
-    height: 100%;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.9);
-  }
-  
-  .toggle input {
-    opacity: 0;
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-  
-  
+.btn-class-name .front {
+  background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%); /* Dégradé de couleur primaire pour la face avant */
+  box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5); /* Ombre légère sur la face avant */
+  border-radius: 100%; /* Contours arrondis pour la face avant */
+  position: absolute; /* Positionnement absolu dans le bouton */
+  border: 1px solid rgb(var(--secondary)); /* Bordure secondaire autour de la face avant */
+  left: 0; /* Aligne à gauche */
+  top: 0; /* Aligne en haut */
+  width: 100%; /* Remplir toute la largeur du bouton */
+  height: 100%; /* Remplir toute la hauteur du bouton */
+  display: flex; /* Utilisation du flexbox pour centrer le contenu */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  font-size: 1.2rem; /* Taille de la police */
+  font-weight: 600; /* Poids de la police */
+  font-family: inherit; /* Hérite de la police du parent */
+  transform: translateY(-15%); /* Déplace légèrement la face avant vers le haut */
+  transition: .15s; /* Transition douce pour les changements */
+  color: rgb(var(--secondary)); /* Couleur de texte de la face avant */
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%); /* Réinitialise la position lors de l'activation du bouton */
+  box-shadow: 0 0; /* Supprime l'ombre lors de l'activation */
+}
+
+/* Conteneur du bouton de bascule pour le mode sombre */
+.toggle {
+  position: absolute; /* Positionnement absolu pour permettre le centrage */
+  top: 50%; /* Milieu vertical de l'écran */
+  left: 50%; /* Milieu horizontal de l'écran */
+  transform: translate(-50%, -50%); /* Centrage parfait du bouton */
+  height: 100px; /* Taille du conteneur */
+  width: 100px; /* Taille du conteneur */
+}
+
+/* Cercle de fond du bouton de bascule */
+.toggle:before {
+  box-shadow: 0; /* Pas d'ombre */
+  border-radius: 84.5px; /* Rounds the edges */
+  background: #fff; /* Fond blanc */
+  position: absolute; /* Positionnement absolu dans le conteneur */
+  margin-left: -36px; /* Décalage horizontal pour centrer */
+  margin-top: -36px; /* Décalage vertical pour centrer */
+  opacity: 0.2; /* Opacité réduite */
+  height: 72px; /* Hauteur du cercle */
+  width: 72px; /* Largeur du cercle */
+  left: 50%; /* Centré horizontalement */
+  top: 50%; /* Centré verticalement */
+}
+
+/* Modifie le texte du label lorsque le bouton est coché */
+.toogle input:checked~.label {
+  color: rgba(255,0,0,0.8); /* Change la couleur du texte en rouge lorsque le bouton est activé */
+}
+
+/* Contenu visuel du bouton de bascule */
+.toggle .button {
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1); /* Transition fluide pour les changements */
+  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2); /* Ombres multiples autour du bouton */
+  border-radius: 68.8px; /* Rond pour le bouton */
+  position: absolute; /* Positionnement absolu dans le conteneur */
+  background: #eaeaea; /* Fond gris clair pour le bouton */
+  margin-left: -34.4px; /* Décalage horizontal pour centrer */
+  margin-top: -34.4px; /* Décalage vertical pour centrer */
+  display: block; /* Affichage en bloc pour occuper tout l'espace */
+  height: 68.8px; /* Hauteur du bouton */
+  width: 68.8px; /* Largeur du bouton */
+  left: 50%; /* Centré horizontalement */
+  top: 50%; /* Centré verticalement */
+}
+
+/* Label du bouton de bascule */
+.toggle .label {
+  transition: color 300ms ease-out; /* Transition douce pour la couleur */
+  line-height: 101px; /* Centrer le texte verticalement */
+  text-align: center; /* Centrer le texte horizontalement */
+  position: absolute; /* Positionnement absolu dans le conteneur */
+  font-weight: 700; /* Poids de la police */
+  font-size: 28px; /* Taille de la police */
+  display: block; /* Affichage en bloc */
+  opacity: 0.9; /* Opacité légèrement réduite */
+  height: 100%; /* Hauteur maximale du label */
+  width: 100%; /* Largeur maximale du label */
+  color: rgba(0, 0, 0, 0.9); /* Couleur du texte par défaut (noir) */
+}
+
+/* Cache l'input réel du checkbox */
+.toggle input {
+  opacity: 0; /* Rendre l'input invisible */
+  position: absolute; /* Positionnement absolu */
+  cursor: pointer; /* Changer le curseur en main lorsqu'il est sur l'input */
+  z-index: 1; /* Mettre l'input devant les autres éléments */
+  height: 100%; /* Prendre toute la hauteur du conteneur */
+  width: 100%; /* Prendre toute la largeur du conteneur */
+  left: 0; /* Aligner à gauche */
+  top: 0; /* Aligner en haut */
+}
+
 /* Lorsque le bouton est activé (coché) */
 .toggle input:checked ~ .label {
-    color: white; /* Change le texte du label en blanc */
+  color: white; /* Change la couleur du texte en blanc */
 }
 
-/* Lorsqu'on appuie sur le bouton (état actif) */
+/* Lorsque l'on appuie sur le bouton (état actif) */
 .toggle input:active ~ .label {
-    color: white; /* Change le texte du label en blanc temporairement */
+  color: white; /* Change la couleur du texte en blanc temporairement */
 }
 
-  
 /* Si le bouton est activé */
 .toggle input:checked ~ .button {
-    background: black; /* Change la couleur du bouton en noir */
-    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.8), 
-                inset 0 -8px 25px -1px rgba(255, 255, 255, 0.9), 
-                0 -10px 15px -1px rgba(255, 255, 255, 0.6), 
-                inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), 
-                inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
+  background: black; /* Le bouton devient noir */
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.8), 
+              inset 0 -8px 25px -1px rgba(255, 255, 255, 0.9), 
+              0 -10px 15px -1px rgba(255, 255, 255, 0.6), 
+              inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), 
+              inset 0 0 5px 1px rgba(255, 255, 255, 0.6); /* Ombres multiples pour le bouton activé */
 }
 
 /* Lorsqu'on appuie sur le bouton */
 .toggle input:active ~ .button {
-    background: black; /* Le bouton devient noir lorsqu'il est pressé */
-    filter: brightness(0.8); /* Effet visuel légèrement atténué */
+  background: black; /* Le bouton devient noir lorsqu'il est pressé */
+  filter: brightness(0.8); /* Effet visuel légèrement atténué */
 }
